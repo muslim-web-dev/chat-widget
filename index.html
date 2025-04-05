@@ -5,6 +5,11 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Launch - Coming Soon and Launch Template</title>
     <link rel="stylesheet" href="./custom.css" />
+    <style>
+        body{
+            background-color: aqua;
+        }
+    </style>
   </head>
   <body>
     <h4>Launch - Coming Soon and Launch Template</h4>
@@ -17,6 +22,18 @@
         showPersona: true,
         icon: "https://chat-widget-kappa-tan.vercel.app/logo.png",
       });
+    </script>
+    <script>
+        const iframe = document.getElementById("myIframe");
+const style = document.createElement('style');
+style.textContent = `
+    .chat-header {
+        background-color: #6d28d2 !important;
+        color: white !important;
+        font-size: 20px !important;
+    }
+`;
+iframe.contentWindow.document.head.appendChild(style);
     </script>
   </body>
 </html>
