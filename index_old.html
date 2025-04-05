@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Launch - Coming Soon and Launch Template</title>
+    <link rel="stylesheet" href="./custom.css" />
+    <style>
+      body {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>Launch - Coming Soon and Launch Template</h4>
+
+    <script src="https://web.chatrace.com/webchat/plugin.js?v=2"></script>
+    <script>
+      ktt10.setup({
+        id: "DZJJVS8tN41Q0GNu",
+        accountId: "1523511",
+        showPersona: true,
+        icon: "https://chat-widget-kappa-tan.vercel.app/logo.png",
+      });
+    </script>
+    <script>
+      setTimeout(() => {
+        const iframe = document.getElementById("ktt10-iframe");
+        console.log("iframe is ", iframe);
+        const style = document.createElement("style");
+        style.textContent = `
+            .chat-header {
+                background-color: #6d28d2 !important;
+                color: white !important;
+                font-size: 20px !important;
+            }
+        `;
+        iframe.contentWindow.document.head.appendChild(style);
+      }, 5000);
+    </script>
+  </body>
+</html>
