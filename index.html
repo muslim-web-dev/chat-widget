@@ -6,9 +6,9 @@
     <title>Launch - Coming Soon and Launch Template</title>
     <link rel="stylesheet" href="./custom.css" />
     <style>
-        body{
-            background-color: aqua;
-        }
+      body {
+        background-color: aqua;
+      }
     </style>
   </head>
   <body>
@@ -24,16 +24,19 @@
       });
     </script>
     <script>
+      setTimeout(() => {
         const iframe = document.getElementById("ktt10-iframe");
-const style = document.createElement('style');
-style.textContent = `
-    .chat-header {
-        background-color: #6d28d2 !important;
-        color: white !important;
-        font-size: 20px !important;
-    }
-`;
-iframe.contentWindow.document.head.appendChild(style);
+        console.log("iframe is ", iframe);
+        const style = document.createElement("style");
+        style.textContent = `
+            .chat-header {
+                background-color: #6d28d2 !important;
+                color: white !important;
+                font-size: 20px !important;
+            }
+        `;
+        iframe.contentWindow.document.head.appendChild(style);
+      }, 5000);
     </script>
   </body>
 </html>
