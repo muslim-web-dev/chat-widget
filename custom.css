@@ -1,18 +1,68 @@
 /* widget sizeing  (width [px] , height[px] , border-radius [%]) */
-.ktt10-flt{
-    border-radius: 40px;
-    width:500px;
+.ktt10-flt {
+  border-radius: 40px;
+  width: 500px;
 
-    /* for height  default max height is 600px  but  we will remove  and make max height  100vh */
-    /* need to check it  if  updating the max height  or not   */
-    max-height: 100vh !important;  
-    /* then set the height   */
-    /* defautl height is 80vh */
-    height: 90vh;
+  /* for height  default max height is 600px  but  we will remove  and make max height  100vh */
+  /* need to check it  if  updating the max height  or not   */
+  max-height: 100vh !important;
+  /* then set the height   */
+  /* defautl height is 80vh */
+  height: 90vh;
 }
 
+/* Update the  icon with url 
+Need to place the  url on the script itself :
+          ktt10.setup({id: 'DZJJVS8tN41Q0GNu', accountId: '1523511', showPersona: true, icon: "https://chat-widget-kappa-tan.vercel.app/logo.png"});
+                        
+ */
+
 /* Header setting */
-.chat-header{
-    background-color: #6d28d2;
-    color: white;
+.chat-header {
+  background-color: #6d28d2;
+  color: white;
+}
+
+/* message Background setting */
+.chat-area {
+  background: #c007c3;
+  background: -moz-linear-gradient(
+    90deg,
+    #c007c3 0%,
+    #2d03a5 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    #c007c3 0%,
+    #2d03a5 100%
+  );
+  background: linear-gradient(
+    90deg,
+    #c007c3 0%,
+    #2d03a5 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c007c3",endColorstr="#2d03a5",GradientType=1);
+}
+
+
+/* message setting  ( borderRadius, background , font color , font size )   */
+.my-message .message-text{
+    padding: 8px 12px !important;
+    border-radius: 0 !important;
+    background: #e81194 !important;
+}
+
+.my-message .message-text pre{
+    color: white !important;
+    font-size: 18px !important;
+}
+
+.other-message .message-text{
+    padding: 8px 12px !important;
+    border-radius: 0 !important;
+    background: #630940 !important;
+}
+.other-message .message-text pre{
+    color: white !important;
+    font-size: 18px !important;
 }
