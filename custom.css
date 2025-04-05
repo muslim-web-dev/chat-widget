@@ -1,0 +1,18 @@
+/* widget sizeing  (width [px] , height[px] , border-radius [%]) */
+.ktt10-flt{
+    border-radius: 40px;
+    width:500px;
+
+    /* for height  default max height is 600px  but  we will remove  and make max height  100vh */
+    /* need to check it  if  updating the max height  or not   */
+    max-height: 100vh !important;  
+    /* then set the height   */
+    /* defautl height is 80vh */
+    height: 90vh;
+}
+
+/* Header setting */
+.chat-header{
+    background-color: #6d28d2;
+    color: white;
+}
