@@ -432,30 +432,30 @@
                         <div class="section-content">
                             <div class="control-group">
                                 <label for="bubbleWidth">Bubble Width (px)</label>
-                                <input type="number" id="bubbleWidth" class="form-input" value="70" min="40" max="200">
+                                <input type="range" id="bubbleWidth" class="form-input" value="70" min="40" max="200">
                             </div>
                             <div class="control-group">
                                 <label for="bubbleHeight">Bubble Height (px)</label>
-                                <input type="number" id="bubbleHeight" class="form-input" value="70" min="40" max="200">
+                                <input type="range" id="bubbleHeight" class="form-input" value="70" min="40" max="200">
                             </div>
                             <div class="control-group">
                                 <label for="iconWidth">Icon Width (%)</label>
-                                <input type="number" id="iconWidth" class="form-input" value="60" min="10" max="100">
+                                <input type="range" id="iconWidth" class="form-input" value="60" min="10" max="100">
                                 <span class="help-text">Percentage relative to bubble size</span>
                             </div>
                             <div class="control-group">
                                 <label for="iconHeight">Icon Height (%)</label>
-                                <input type="number" id="iconHeight" class="form-input" value="60" min="10" max="100">
+                                <input type="range" id="iconHeight" class="form-input" value="60" min="10" max="100">
                                 <span class="help-text">Percentage relative to bubble size</span>
                             </div>
                             <div class="control-group">
                                 <label for="iconXOffset">Icon X Offset (px)</label>
-                                <input type="number" id="iconXOffset" class="form-input" value="0">
+                                <input type="range" id="iconXOffset" class="form-input" value="0" min="0" max="100">
                                 <span class="help-text">Positive moves icon right, negative moves left</span>
                             </div>
                             <div class="control-group">
                                 <label for="iconYOffset">Icon Y Offset (px)</label>
-                                <input type="number" id="iconYOffset" class="form-input" value="0">
+                                <input type="range" id="iconYOffset" class="form-input" value="0" min="0" max="100">
                                 <span class="help-text">Positive moves icon down, negative moves up</span>
                             </div>
                             <div class="control-group">
@@ -478,12 +478,12 @@
                             </div>
                             <div class="control-group">
                                 <label for="popupX">Popup X Offset (px)</label>
-                                <input type="number" id="popupX" class="form-input" value="0" placeholder="Horizontal offset">
+                                <input type="range" id="popupX" class="form-input" value="0" min="0" max="100" placeholder="Horizontal offset">
                                 <span class="help-text">Positive moves right, negative moves left</span>
                             </div>
                             <div class="control-group">
                                 <label for="popupY">Popup Y Offset (px)</label>
-                                <input type="number" id="popupY" class="form-input" value="-20" placeholder="Vertical offset">
+                                <input type="range" id="popupY" class="form-input" value="-20" min="-100" max="100"  placeholder="Vertical offset">
                                 <span class="help-text">Negative moves up, positive moves down</span>
                             </div>
                             <div class="control-group">
@@ -492,7 +492,7 @@
                             </div>
                             <div class="control-group">
                                 <label for="popupFontSize">Popup Font Size (px)</label>
-                                <input type="number" id="popupFontSize" class="form-input" value="16" min="10" max="36">
+                                <input type="range" id="popupFontSize" class="form-input" value="16" min="10" max="36">
                             </div>
                             <div class="control-group">
                                 <label for="popupTextColor">Popup Text Color</label>
@@ -517,7 +517,7 @@
                             </div>
                             <div class="control-group">
                                 <label for="popupBorderWidth">Popup Border Thickness (px)</label>
-                                <input type="number" id="popupBorderWidth" class="form-input" value="1" min="0" max="10">
+                                <input type="range" id="popupBorderWidth" class="form-input" value="1" min="0" max="10">
                             </div>
                             <div class="control-group">
                                 <label for="popupFontFamily">Popup Font Family</label>
@@ -553,10 +553,11 @@
                             <div class="control-group">
                                 <label for="chatDelay">Chat Open Delay (seconds)</label>
                                 <input 
-                                    type="number" 
+                                    type="range" 
                                     id="chatDelay" 
                                     class="form-input" 
                                     min="0" 
+                                    max="100"
                                     value="0"
                                     placeholder="Enter delay in seconds"
                                 />
@@ -565,10 +566,11 @@
                             <div class="control-group">
                                 <label for="popupDelay">Popup Display Delay (seconds)</label>
                                 <input 
-                                    type="number" 
+                                    type="range" 
                                     id="popupDelay" 
                                     class="form-input" 
                                     min="0" 
+                                    max="100"
                                     value="0"
                                     placeholder="Enter delay in seconds"
                                 />
