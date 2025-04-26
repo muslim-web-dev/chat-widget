@@ -554,31 +554,33 @@
                         </div>
                         <div class="section-content">
                             <div class="control-group">
-                                <label for="chatDelay">Chat Open Delay (seconds)</label>
+                                <label for="y_chatDelay" id="y_chatDelayLabel">Chat Open Delay (0 seconds)</label>
                                 <input 
                                     type="range" 
-                                    id="chatDelay" 
+                                    id="y_chatDelay" 
                                     class="form-input" 
                                     min="0" 
                                     max="100"
                                     value="0"
                                     placeholder="Enter delay in seconds"
+                                    oninput="document.getElementById('y_chatDelayLabel').innerText = 'Chat Open Delay (' + this.value + ' seconds)'"
                                 />
                                 <span class="help-text">Set to 0 to disable auto-open</span>
                             </div>
+                            
                             <div class="control-group">
-                                <label for="popupDelay">Popup Display Delay (seconds)</label>
+                                <label for="x_popupDelay" id="x_popupLabel">Popup Display Delay (0 seconds)</label>
                                 <input 
                                     type="range" 
-                                    id="popupDelay" 
+                                    id="x_popupDelay" 
                                     class="form-input" 
                                     min="0" 
                                     max="100"
                                     value="0"
-                                    placeholder="Enter delay in seconds"
+                                    oninput="document.getElementById('x_popupLabel').innerText = 'Popup Display Delay (' + this.value + ' seconds)';"
                                 />
                                 <span class="help-text">Set to 0 to show immediately</span>
-                            </div>
+                            </div>                            
                         </div>
                     </div>
 
