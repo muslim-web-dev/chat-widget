@@ -82,17 +82,13 @@
   <footer>&copy; 2025 Doubletick. All rights reserved.</footer>
 
 
-
-  <!-- widget -->
-  <!-- <script src="https://app.doubletick.ai/webchat/plugin.js?v=6"></script><script>ktt10.setup({id:"psYDADKlij",accountId:"1644375",color:"#006dff"})</script> -->
-
-<!-- Doubletick AI Floating Bubble Setup -->
+  <!-- Doubletick AI Floating Bubble Setup -->
 <style>
 
   .ktt10-btn {
-      width: 84px !important;
-      height: 64px !important;
-      background: #ee00ff !important;
+      width: 112px !important;
+      height: 109px !important;
+      background: linear-gradient(45deg, #0157fe, #0261ff) !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
@@ -100,10 +96,10 @@
   }
   
   .ktt10-btn img {
-      width: 60% !important;
-      height: 27% !important;
+      width: 71% !important;
+      height: 72% !important;
       object-fit: cover !important;
-      transform: translate(10px, 0px) !important;
+      transform: translate(27px, 32px) !important;
   }
   
   
@@ -115,11 +111,11 @@
       gap: 10px;
       padding: 8px 12px;
       border-radius: 6px;
-      background: #cca8a8;
-      border: 1px solid #000000;
-      color: #0000ff;
-      bottom: 104px;
-      right: 5px;
+      background: #a1a1a1;
+      border: 1px solid #a00e93;
+      color: #0b0bda;
+      bottom: 165px;
+      right: -14px;
       font-size: 16px;
       font-family: Times New Roman;
       font-weight: bold;
@@ -146,7 +142,7 @@
   
   
   <div id="custom-popup">
-      <span id="custom-popup-text" style="font-family: Times New Roman; font-weight: bold; font-style: normal;">tested </span>
+      <span id="custom-popup-text" style="font-family: Times New Roman; font-weight: bold; font-style: normal;">Click Here for a Discount 💸</span>
       <button id="custom-popup-close">&times;</button>
   </div>
   
@@ -157,7 +153,7 @@
       ktt10.setup({
           accountId: "1644375",
           id: "psYDADKlij",
-          color: "#ee00ff",
+          color: "#0157fe",
           icon: "https://cdn.prod.website-files.com/66d4cc49d68f6a591394e081/67d6dfcf3ed28aa00c1803a8_Iocn.svg",
           type: "floating"
       });
@@ -181,18 +177,18 @@
           if (chatTimer) clearTimeout(chatTimer);
           if (popupTimer) clearTimeout(popupTimer);
   
-          if (0 > 0) {
-              popupTimer = setTimeout(showPopup, 0 * 1000);
+          if (10 > 0) {
+              popupTimer = setTimeout(showPopup, 10 * 1000);
           } else {
               showPopup();
           }
   
           const ktt10Btn = document.querySelector('.ktt10-btn');
-          if (0 > 0 && ktt10Btn) {
+          if (4 > 0 && ktt10Btn) {
               chatTimer = setTimeout(() => {
                   ktt10Btn.click();
                   hidePopup();
-              }, 0 * 1000);
+              }, 4 * 1000);
           }
       }
   
@@ -215,6 +211,7 @@
   
   })();
   </script>
+
 </body>
 
 </html>
