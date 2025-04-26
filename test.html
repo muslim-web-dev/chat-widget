@@ -84,7 +84,140 @@
 
 
   <!-- widget -->
-  <script src="https://app.doubletick.ai/webchat/plugin.js?v=6"></script><script>ktt10.setup({id:"psYDADKlij",accountId:"1644375",color:"#006dff"})</script>
+  <!-- <script src="https://app.doubletick.ai/webchat/plugin.js?v=6"></script><script>ktt10.setup({id:"psYDADKlij",accountId:"1644375",color:"#006dff"})</script> -->
+
+  <!-- Doubletick AI Floating Bubble Setup -->
+<style>
+
+  .ktt10-btn {
+      width: 111px !important;
+      height: 92px !important;
+      background: #a0228f !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      overflow: hidden !important;
+  }
+  
+  .ktt10-btn img {
+      width: 26% !important;
+      height: 78% !important;
+      object-fit: cover !important;
+      transform: translate(14px, 0px) !important;
+  }
+  
+  
+  #custom-popup {
+      position: fixed;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      background: #cb3434;
+      border: 3px solid #111c27;
+      color: #ffffff;
+      bottom: 132px;
+      right: 20px;
+      font-size: 16px;
+      font-family: Courier New;
+      font-weight: bold;
+      font-style: normal;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      z-index: 9999;
+      min-width: 200px;
+      max-width: 300px;
+  }
+  #custom-popup-text {
+      cursor: pointer;
+      flex-grow: 1;
+  }
+  #custom-popup-close {
+      background: none;
+      border: none;
+      font-size: 20px;
+      color: #8e8e93;
+      cursor: pointer;
+      padding: 0;
+      line-height: 1;
+  }
+  </style>
+  
+  
+  <div id="custom-popup">
+      <span id="custom-popup-text" style="font-family: Courier New; font-weight: bold; font-style: normal;">changed title xxx</span>
+      <button id="custom-popup-close">&times;</button>
+  </div>
+  
+  
+  <script src="https://app.chatgptbuilder.io/webchat/plugin.js?v=5"></script>
+  <script>
+  (function() {
+      ktt10.setup({
+          accountId: "1644375",
+          id: "psYDADKlij",
+          color: "#a0228f",
+          icon: "https://cdn.prod.website-files.com/66d4cc49d68f6a591394e081/67d6dfcf3ed28aa00c1803a8_Iocn.svg",
+          type: "floating"
+      });
+  
+      
+      const popup = document.getElementById('custom-popup');
+      const popupTextEl = document.getElementById('custom-popup-text');
+      const closePopupBtn = document.getElementById('custom-popup-close');
+      let chatTimer = null;
+      let popupTimer = null;
+  
+      function showPopup() {
+          popup.style.display = 'flex';
+      }
+  
+      function hidePopup() {
+          popup.style.display = 'none';
+      }
+  
+      function initializeTimers() {
+          if (chatTimer) clearTimeout(chatTimer);
+          if (popupTimer) clearTimeout(popupTimer);
+  
+          if (10 > 0) {
+              popupTimer = setTimeout(showPopup, 10 * 1000);
+          } else {
+              showPopup();
+          }
+  
+          const ktt10Btn = document.querySelector('.ktt10-btn');
+          if (5 > 0 && ktt10Btn) {
+              chatTimer = setTimeout(() => {
+                  ktt10Btn.click();
+                  hidePopup();
+              }, 5 * 1000);
+          }
+      }
+  
+      popupTextEl.addEventListener('click', () => {
+          const ktt10Btn = document.querySelector('.ktt10-btn');
+          if (ktt10Btn) ktt10Btn.click();
+          hidePopup();
+      });
+  
+      closePopupBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          hidePopup();
+      });
+  
+      if (document.readyState === 'complete') {
+          initializeTimers();
+      } else {
+          window.addEventListener('load', initializeTimers);
+      }
+  
+  })();
+  </script>
+   
+   
+   
 </body>
 
 </html>
