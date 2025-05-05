@@ -179,7 +179,9 @@
             transition: var(--transition-base);
             background: white;
         }
-
+        input[type="range"] {
+            padding: 0 !important;
+        }
         .form-input:hover {
             border-color: var(--neutral-400);
         }
@@ -476,7 +478,7 @@
                                 <input type="checkbox" id="popupEnabled" checked>
                                 <label for="popupEnabled" style="margin:0;">Enable Popup</label>
                             </div>
-                            <div class="control-group">
+                            <div class="control-group " style="display: none;" >
                                 <label for="popupX">Popup X Offset (px)</label>
                                 <input type="range" id="popupX" class="form-input" value="0" min="0" max="100" placeholder="Horizontal offset">
                                 <span class="help-text">Positive moves right, negative moves left</span>
