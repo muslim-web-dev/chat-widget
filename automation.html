@@ -550,22 +550,9 @@
                             Timer Settings
                         </div>
                         <div class="section-content">
+                            
                             <div class="control-group">
-                                <label for="chatDelay" id="_chatDelay">Popup Chat Text  Delay (seconds)</label>
-                                <input 
-                                    type="range" 
-                                    id="chatDelay" 
-                                    oninput="document.getElementById('_chatDelay').innerText = 'Chat Open Delay (' + this.value + ' seconds)'"
-                                    class="form-input" 
-                                    min="0" 
-                                    max="100"
-                                    value="0"
-                                    placeholder="Enter delay in seconds"
-                                />
-                                <span class="help-text">Set to 0 to disable auto-open</span>
-                            </div>
-                            <div class="control-group">
-                                <label for="popupDelay" id="_popupDelay">Popup Widget Display Delay (seconds)</label>
+                                <label for="popupDelay" id="_popupDelay">Popup Chat Text  Delay (seconds)</label>
                                 <input 
                                     type="range" 
                                     id="popupDelay" 
@@ -577,6 +564,20 @@
                                     placeholder="Enter delay in seconds"
                                 />
                                 <span class="help-text">Set to 0 to show immediately</span>
+                            </div>
+                            <div class="control-group">
+                                <label for="chatDelay" id="_chatDelay">Popup Widget Display Delay (seconds)</label>
+                                <input 
+                                    type="range" 
+                                    id="chatDelay" 
+                                    oninput="document.getElementById('_chatDelay').innerText = 'Chat Open Delay (' + this.value + ' seconds)'"
+                                    class="form-input" 
+                                    min="0" 
+                                    max="100"
+                                    value="0"
+                                    placeholder="Enter delay in seconds"
+                                />
+                                <span class="help-text">Set to 0 to disable auto-open</span>
                             </div>
                         </div>
                     </div>
